@@ -3,10 +3,10 @@ import 'package:lottie/lottie.dart';
 import 'package:webview/screens/web_view.dart';
 import 'package:webview/ui/theme.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const HomeScreens());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class HomeScreens extends StatelessWidget {
+  const HomeScreens({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
               Column(
                 children: [
                   Container(
-                    margin: const EdgeInsets.only(top: 550, left: 100),
+                    margin: const EdgeInsets.only(top: 550, left: 110),
                     child: Text(
                       'For more info go to our website!',
                       style: subHeadingStyle,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:webview/screens/home_screens.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewScreens extends StatefulWidget {
@@ -28,6 +29,8 @@ class _WebViewScreensState extends State<WebViewScreens> {
             onPressed: () {
               controller.clearCache();
               CookieManager().clearCookies();
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const HomeScreens()));
             },
           ),
           title: const Text('WebView'),
