@@ -27,8 +27,6 @@ class _WebViewScreensState extends State<WebViewScreens> {
           leading: IconButton(
             icon: const Icon(Icons.clear),
             onPressed: () {
-              controller.clearCache();
-              CookieManager().clearCookies();
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const HomeScreens()));
             },
@@ -41,7 +39,14 @@ class _WebViewScreensState extends State<WebViewScreens> {
                     controller.goBack();
                   }
                 },
-                icon: const Icon(Icons.arrow_back))
+                icon: const Icon(Icons.arrow_back)),
+            IconButton(
+                onPressed: () {
+                  controller.reload();
+                  controller.clearCache();
+                  CookieManager().clearCookies();
+                },
+                icon: const Icon(Icons.refresh))
           ],
         ),
         body: WebView(
