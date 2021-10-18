@@ -24,14 +24,15 @@ class _WebViewScreensState extends State<WebViewScreens> {
       },
       child: Scaffold(
         appBar: AppBar(
+            backgroundColor: Colors.yellow[600],
           leading: IconButton(
-            icon: const Icon(Icons.clear),
+            icon: const Icon(Icons.clear,color: Colors.black,),
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const HomeScreens()));
             },
           ),
-          title: const Text('WebView'),
+          title: const Text('Tarsoft'),
           actions: [
             IconButton(
                 onPressed: () async {
@@ -39,14 +40,14 @@ class _WebViewScreensState extends State<WebViewScreens> {
                     controller.goBack();
                   }
                 },
-                icon: const Icon(Icons.arrow_back)),
+                icon: const Icon(Icons.arrow_back,color: Colors.black,)),
             IconButton(
                 onPressed: () {
                   controller.reload();
                   controller.clearCache();
                   CookieManager().clearCookies();
                 },
-                icon: const Icon(Icons.refresh))
+                icon: const Icon(Icons.refresh,color: Colors.black,))
           ],
         ),
         body: WebView(
