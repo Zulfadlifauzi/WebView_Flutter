@@ -19,59 +19,64 @@ class _HomeScreensState extends State<HomeScreens> {
           backgroundColor: primaryClr,
           appBar: AppBar(
             backgroundColor: Colors.yellow[600],
+            centerTitle: true,
             title: const Text(
               'TARSOFT',
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Colors.black, letterSpacing: 5),
             ),
           ),
           body: SingleChildScrollView(
             child: Stack(
               children: [
-                Container(
-                  margin: const EdgeInsets.only(left: 70, top: 20),
-                  child: Text(
-                    'WELCOME TO TARSOFT',
-                    style: headingStyle,
+                Center(
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 20),
+                    child: Text(
+                      'WELCOME TO TARSOFT',
+                      style: headingStyle,
+                    ),
                   ),
                 ),
                 Container(
                   margin: const EdgeInsets.only(top: 60),
-                  width: double.infinity,
+                  width: MediaQuery.of(context).size.width,
                   height: 440,
                   child: Row(
                     children: [Lottie.asset('assets/lottie/hi.json')],
                   ),
                 ),
-                Column(
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(top: 550, left: 110),
-                      child: Text(
-                        'For more info go to our website!',
-                        style: subHeadingStyle,
-                      ),
-                    ),
-                    Container(
-                      width: 100,
-                      margin: const EdgeInsets.only(left: 120, top: 10),
-                      decoration: BoxDecoration(
-                          color: Colors.yellow[600],
-                          borderRadius: BorderRadius.circular(5)),
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const WebViewScreens()));
-                        },
+                Center(
+                  child: Column(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(top: 550),
                         child: Text(
-                          'WEBSITE',
-                          style: textButton,
+                          'For more info go to our website!',
+                          style: subHeadingStyle,
                         ),
                       ),
-                    )
-                  ],
+                      Container(
+                        width: 100,
+                        margin: const EdgeInsets.only(top: 10),
+                        decoration: BoxDecoration(
+                            color: Colors.yellow[600],
+                            borderRadius: BorderRadius.circular(5)),
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.pop(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const WebViewScreens()));
+                          },
+                          child: Text(
+                            'WEBSITE',
+                            style: textButton,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 )
               ],
             ),

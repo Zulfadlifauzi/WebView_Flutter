@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webview/screens/home_screens.dart';
+import 'package:webview/ui/theme.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewScreens extends StatefulWidget {
@@ -24,14 +25,21 @@ class _WebViewScreensState extends State<WebViewScreens> {
       },
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.yellow[600],
           leading: IconButton(
-            icon: const Icon(Icons.clear),
+            icon: const Icon(
+              Icons.clear,
+              color: blackClr,
+            ),
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const HomeScreens()));
             },
           ),
-          title: const Text('WebView'),
+          title: const Text(
+            'Tarsoft.co',
+            style: TextStyle(color: Colors.black),
+          ),
           actions: [
             IconButton(
                 onPressed: () async {
@@ -39,14 +47,20 @@ class _WebViewScreensState extends State<WebViewScreens> {
                     controller.goBack();
                   }
                 },
-                icon: const Icon(Icons.arrow_back)),
+                icon: const Icon(
+                  Icons.arrow_back,
+                  color: blackClr,
+                )),
             IconButton(
                 onPressed: () {
                   controller.reload();
                   controller.clearCache();
                   CookieManager().clearCookies();
                 },
-                icon: const Icon(Icons.refresh))
+                icon: const Icon(
+                  Icons.refresh,
+                  color: blackClr,
+                ))
           ],
         ),
         body: WebView(
