@@ -17,19 +17,20 @@ class _HomeScreensState extends State<HomeScreens> {
         backgroundColor: webViewPrimaryClr,
         appBar: AppBar(
           backgroundColor: Colors.yellow[600],
-          // title: const Text(
-          //   'TARSOFT',
-          //   style: TextStyle(color: Colors.black),
-          // ),
+          title: const Text(
+            'TARSOFT WEBVIEW',
+            style: TextStyle(color: Colors.black, letterSpacing: 5),
+          ),
+          centerTitle: true,
         ),
         body: SingleChildScrollView(
-          child: Stack(
+          child: Column(
             children: [
               Center(
                 child: Column(
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(top: 20),
+                      padding: const EdgeInsets.only(top: 30),
                       child: Text(
                         'WELCOME TO TARSOFT',
                         style: headingStyle,
@@ -39,9 +40,9 @@ class _HomeScreensState extends State<HomeScreens> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 60),
+                padding: EdgeInsets.only(top: 20),
                 width: double.infinity,
-                // height: 400,
+                height: 420,
                 child: Column(
                   children: [
                     Lottie.asset(
@@ -54,7 +55,7 @@ class _HomeScreensState extends State<HomeScreens> {
                 child: Column(
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(top: 500),
+                      padding: EdgeInsets.only(top: 10),
                       child: Text(
                         'For more info go to our website!',
                         style: subHeadingStyle,
