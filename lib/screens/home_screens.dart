@@ -18,38 +18,36 @@ class _HomeScreensState extends State<HomeScreens> {
       home: Scaffold(
           backgroundColor: primaryClr,
           appBar: AppBar(
+            elevation: 0,
             backgroundColor: Colors.yellow[600],
             centerTitle: true,
             title: const Text(
               'TARSOFT',
-              style: TextStyle(color: Colors.black, letterSpacing: 5),
+              style: TextStyle(color: Colors.white, letterSpacing: 5),
             ),
           ),
           body: SingleChildScrollView(
-            child: Stack(
+            child: Column(
               children: [
-                Center(
-                  child: Container(
-                    margin: const EdgeInsets.only(top: 20),
-                    child: Text(
-                      'WELCOME TO TARSOFT',
-                      style: headingStyle,
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(top: 60),
-                  width: MediaQuery.of(context).size.width,
-                  height: 440,
-                  child: Row(
-                    children: [Lottie.asset('assets/lottie/hi.json')],
-                  ),
-                ),
                 Center(
                   child: Column(
                     children: [
                       Container(
-                        margin: const EdgeInsets.only(top: 550),
+                        margin: const EdgeInsets.only(top: 20),
+                        child: Text(
+                          'WELCOME TO TARSOFT',
+                          style: headingStyle,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                    child: Lottie.asset('assets/lottie/hi.json', height: 450)),
+                Center(
+                  child: Column(
+                    children: [
+                      Container(
                         child: Text(
                           'For more info go to our website!',
                           style: subHeadingStyle,
@@ -63,7 +61,7 @@ class _HomeScreensState extends State<HomeScreens> {
                             borderRadius: BorderRadius.circular(5)),
                         child: TextButton(
                           onPressed: () {
-                            Navigator.pop(
+                            Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>

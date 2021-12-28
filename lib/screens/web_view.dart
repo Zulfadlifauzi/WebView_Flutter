@@ -36,10 +36,7 @@ class _WebViewScreensState extends State<WebViewScreens> {
                   MaterialPageRoute(builder: (context) => const HomeScreens()));
             },
           ),
-          title: const Text(
-            'Tarsoft.co',
-            style: TextStyle(color: Colors.black),
-          ),
+          title: const Text('Tarsoft'),
           actions: [
             IconButton(
                 onPressed: () async {
