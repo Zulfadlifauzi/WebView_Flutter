@@ -16,7 +16,7 @@ class _HomeScreensState extends State<HomeScreens> {
     return MaterialApp(
       title: 'Welcome to Flutter',
       home: Scaffold(
-          backgroundColor: primaryClr,
+          backgroundColor: webViewPrimaryClr,
           appBar: AppBar(
             elevation: 0,
             backgroundColor: Colors.yellow[600],
@@ -82,10 +82,3 @@ class _HomeScreensState extends State<HomeScreens> {
     );
   }
 }
-
-// _tarsoft() {
-//   return const WebView(
-//     initialUrl: 'https://tarsoft.co',
-//     javascriptMode: JavascriptMode.unrestricted,
-//   );
-// }

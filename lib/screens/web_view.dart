@@ -32,11 +32,14 @@ class _WebViewScreensState extends State<WebViewScreens> {
               color: blackClr,
             ),
             onPressed: () {
-              Navigator.push(context,
+              Navigator.pop(context,
                   MaterialPageRoute(builder: (context) => const HomeScreens()));
             },
           ),
-          title: const Text('Tarsoft'),
+          title: Text(
+            'Tarsoft.co',
+            style: TextStyle(color: Colors.black),
+          ),
           actions: [
             IconButton(
                 onPressed: () async {
