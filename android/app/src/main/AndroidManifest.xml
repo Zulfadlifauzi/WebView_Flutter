@@ -2,7 +2,7 @@
     package="com.example.webview">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="webview"
+        android:label="Tarsoft Webview"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
